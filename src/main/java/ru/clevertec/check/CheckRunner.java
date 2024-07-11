@@ -21,8 +21,8 @@ public class CheckRunner {
         } catch (CustomException e) {
             try {
                 var message = "ERROR" + System.lineSeparator() + e.getMessage();
-                if (request.getSaveByPath() != null && request.getSaveByPath().isEmpty() == false)
-                    saveFile(request.getSaveByPath(), message);
+                var savePath = (request.getSaveByPath() != null && request.getSaveByPath().isEmpty() == false) ? request.getSaveByPath() : "./result.csv";
+                saveFile(savePath, message);
 
                 System.out.println(message);
                 System.out.println(e.getAdditionalInfo());

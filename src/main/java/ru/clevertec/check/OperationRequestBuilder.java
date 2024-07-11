@@ -11,8 +11,6 @@ public class OperationRequestBuilder {
         for (String arg : array) {
             parse(request, arg);
         }
-        if(request.getSaveByPath() == null)
-            request.setSaveByPath("result.csv");
         return request;
     }
 

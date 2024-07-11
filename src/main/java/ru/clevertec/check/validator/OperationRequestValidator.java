@@ -14,6 +14,9 @@ public class OperationRequestValidator {
 
         if(request.getProductPath() == null || request.getProductPath().isEmpty())
             throw new CustomException("BAD REQUEST", "Comand line argument [pathToFile] not specified");
+
+        if(request.getSaveByPath() == null || request.getSaveByPath().isEmpty())
+            throw new CustomException("BAD REQUEST", "Comand line argument [saveToFile] not specified");
     }
 
     private void validateQuantity(Collection<Integer> values) {
