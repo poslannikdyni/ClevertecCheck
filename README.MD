@@ -3,7 +3,7 @@
 
 1. **Выполнить команду создания контейнера для Docker**
    ```bash
-   docker run --rm --name clevertec-postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=check  postgres
+   docker run --rm --name clevertec-postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres
    ```
 
 2. **Клонировать проект**
@@ -23,7 +23,7 @@
 
 5. **В терминале ввести команду компиляции:**
    ```bash
-   javac -sourcepath ./src ./src/main/java/ru/clevertec/check/*.java
+   .\gradlew jar
    ```
 
 6. **Запустить приложение с заданными параметрами :**
@@ -39,7 +39,7 @@
    Пример команды
    
    ```bash
-   java -jar clevertec-check.jar 3-1 2-5 5-1 5-2 discountCard=1111 balanceDebitCard=100 saveToFile=./result.csv datasource.url=jdbc:postgresql://localhost:5432/check datasource.username=postgres datasource.password=postgres
+   java -jar clevertec-check.jar 3-1 2-5 5-1 5-2 discountCard=1111 balanceDebitCard=100 saveToFile=./result.csv datasource.url=jdbc:postgresql://localhost:5432/postgres datasource.username=postgres datasource.password=postgres
    ```
 
 7. **Изучить вывод в консоле и файле.**
