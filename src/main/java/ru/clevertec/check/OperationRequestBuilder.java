@@ -32,8 +32,10 @@ public class OperationRequestBuilder {
             switch (tmp[0]) {
                 case "discountCard" -> request.setDiscountCardNumber(Integer.parseInt(tmp[1]));
                 case "balanceDebitCard" -> request.setBalanceDebitCard(new BigDecimal(tmp[1]));
-                case "pathToFile" -> request.setProductPath(tmp[1]);
                 case "saveToFile" -> request.setSaveByPath(tmp[1]);
+                case "datasource.url" -> request.setDataSourceUrl(tmp[1]);
+                case "datasource.username" -> request.setDataSourceUsername(tmp[1]);
+                case "datasource.password" -> request.setDataSourcePassword(tmp[1]);
                 default -> throw new CustomException("BAD REQUEST", "Unknown key : " + tmp[0]);
             }
         } catch (NumberFormatException e) {

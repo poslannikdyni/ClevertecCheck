@@ -7,7 +7,9 @@ import java.util.Objects;
 
 public class OperationRequestTO {
     private String saveByPath;
-    private String productPath;
+    private String dataSourceUrl;
+    private String dataSourceUsername;
+    private String dataSourcePassword;
     private Integer discountCardNumber;
     private BigDecimal balanceDebitCard;
     private Map<Long, Integer> idQuantity = new HashMap<Long, Integer>();
@@ -20,12 +22,28 @@ public class OperationRequestTO {
         this.saveByPath = saveByPath;
     }
 
-    public String getProductPath() {
-        return productPath;
+    public String getDataSourceUrl() {
+        return dataSourceUrl;
     }
 
-    public void setProductPath(String productPath) {
-        this.productPath = productPath;
+    public void setDataSourceUrl(String dataSourceUrl) {
+        this.dataSourceUrl = dataSourceUrl;
+    }
+
+    public String getDataSourceUsername() {
+        return dataSourceUsername;
+    }
+
+    public void setDataSourceUsername(String dataSourceUsername) {
+        this.dataSourceUsername = dataSourceUsername;
+    }
+
+    public String getDataSourcePassword() {
+        return dataSourcePassword;
+    }
+
+    public void setDataSourcePassword(String dataSourcePassword) {
+        this.dataSourcePassword = dataSourcePassword;
     }
 
     public Integer getDiscountCardNumber() {
@@ -62,7 +80,9 @@ public class OperationRequestTO {
         if (!(o instanceof OperationRequestTO that)) return false;
 
         return saveByPath.equals(that.saveByPath) &&
-                productPath.equals(that.productPath) &&
+                dataSourceUrl.equals(that.dataSourceUrl) &&
+                dataSourceUsername.equals(that.dataSourceUsername) &&
+                dataSourcePassword.equals(that.dataSourcePassword) &&
                 discountCardNumber.compareTo(that.discountCardNumber) == 0 &&
                 balanceDebitCard.compareTo(that.balanceDebitCard) == 0 &&
                 Objects.equals(idQuantity, that.idQuantity);
@@ -71,7 +91,9 @@ public class OperationRequestTO {
     @Override
     public int hashCode() {
         return Objects.hash(saveByPath,
-                productPath,
+                dataSourceUrl,
+                dataSourceUsername,
+                dataSourcePassword,
                 discountCardNumber,
                 balanceDebitCard,
                 idQuantity);

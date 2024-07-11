@@ -1,6 +1,8 @@
 ---
 # Инструкция по запуску приложения
 
+docker run --name clevertec-postgres -p 5432:5432 -e POSTGRES_PASSWORD=password  postgres
+
 1. **Клонировать проект**
    ```bash
    git clone https://github.com/poslannikdyni/ClevertecCheck.git

@@ -9,7 +9,7 @@ import static main.java.ru.clevertec.check.util.Utility.saveFile;
 
 public class CheckRunner {
     public static void main(String[] args) {
-//        args = setDebugProgramArgument();
+        args = setDebugProgramArgument();
 
         OperationRequestTO request = null;
         try {
@@ -40,8 +40,10 @@ public class CheckRunner {
         argsList.add("5-2");
         argsList.add("discountCard=1111");
         argsList.add("balanceDebitCard=100");
-        argsList.add("pathToFile=./src/main/resources/products.csv");
         argsList.add("saveToFile=result.csv");
+        argsList.add("datasource.url=jdbc:postgresql://localhost:5432/postgres");
+        argsList.add("datasource.username=postgres");
+        argsList.add("datasource.password=password");
         return argsList.toArray(new String[0]);
     }
 }

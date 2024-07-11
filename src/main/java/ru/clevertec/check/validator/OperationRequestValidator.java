@@ -12,11 +12,16 @@ public class OperationRequestValidator {
 
         if(request.hasBalanceDebitCard() == false) throw new CustomException("BAD REQUEST", "Balance for debit card must not be empty");
 
-        if(request.getProductPath() == null || request.getProductPath().isEmpty())
-            throw new CustomException("BAD REQUEST", "Comand line argument [pathToFile] not specified");
+        checkSctringArgument(request.getSaveByPath(), "BAD REQUEST", "Command line argument [saveToFile] not specified");
+        checkSctringArgument(request.getSaveByPath(), "INTERNAL SERVER ERROR", "Command line argument [datasource.url] not specified");
+        checkSctringArgument(request.getSaveByPath(), "INTERNAL SERVER ERROR", "Command line argument [datasource.username] not specified");
+        checkSctringArgument(request.getSaveByPath(), "INTERNAL SERVER ERROR", "Command line argument [datasource.password] not specified");
+    }
 
-        if(request.getSaveByPath() == null || request.getSaveByPath().isEmpty())
-            throw new CustomException("BAD REQUEST", "Comand line argument [saveToFile] not specified");
+    private void checkSctringArgument(String arg, String error, String advancedInfo) {
+        if(arg == null || arg.isEmpty())
+            throw new CustomException(error, advancedInfo);
+
     }
 
     private void validateQuantity(Collection<Integer> values) {
