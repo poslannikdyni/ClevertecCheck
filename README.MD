@@ -23,7 +23,7 @@
    ```
 
 5. **Запустить приложение с заданными параметрами :**
-   java -cp src ./src/main/java/ru/clevertec/check/CheckRunner id-quantity discountCard=xxxx balanceDebitCard=xxxx
+   java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java id-quantity discountCard=xxxx balanceDebitCard=xxxx
    где 
    > id - идентификатор товара
    > quantity - количество товара
@@ -33,7 +33,7 @@
    Пример команды
 
    ```bash
-   java -cp src ./src/main/java/ru/clevertec/check/CheckRunner 3-1 2-5 5-1 5-2 discountCard=1111 balanceDebitCard=100.11
+   java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 3-1 2-5 5-1 5-2 discountCard=1111 balanceDebitCard=100.11
    ```
 
 6. **Изучить вывод в консоле и файле.**
