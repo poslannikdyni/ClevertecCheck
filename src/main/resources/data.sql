@@ -1,3 +1,9 @@
+DROP DATABASE IF EXISTS "check";
+CREATE DATABASE "check";
+CREATE SCHEMA "public"
+
+\c check
+
 DROP TABLE IF EXISTS public.discount_card;
 CREATE TABLE public.discount_card
 (
