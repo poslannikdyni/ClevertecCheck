@@ -19,7 +19,7 @@
 4. **В терминале ввести команду компиляции:**
 
    ```bash
-   javac -d ./out -sourcepath ./src ./src/main/java/ru/clevertec/check/*.java
+   javac -sourcepath ./src ./src/main/java/ru/clevertec/check/*.java
    ```
 
 5. **Запустить приложение с заданными параметрами :**
