@@ -37,6 +37,15 @@
    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 3-1 2-5 5-1 5-2 discountCard=1111 balanceDebitCard=100.11 pathToFile=./src/main/resources/products.csv saveToFile=result_for_operation_request.csv
    ```
 
+   Примеры команд из тестового задания с ошибкой
+   
+   ```bash
+   java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 discountCard=1111 balanceDebitCard=100 pathToFile=./products.csv
+   ```
+   ```bash
+   java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java 1-1 discountCard=1111 balanceDebitCard=12.1 saveToFile=./error_result.csv
+   ```
+
 6. **Изучить вывод в консоле и файле.**
    > Консольная версия чека будет содержать дополнительную информацию о том какая скидка была применена к конкретной позиции.
 ---
