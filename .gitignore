@@ -8,6 +8,7 @@ result.csv
 build/
 gradle/
 .gradle/
+/.gradle
 
 ### Eclipse ###
 .apt_generated
