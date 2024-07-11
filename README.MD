@@ -33,7 +33,7 @@
    Пример команды
 
    ```bash
-   java -cp ./out main.java.ru.clevertec.check.CheckRunner 3-1 2-5 5-1 5-2 discountCard=1111 balanceDebitCard=100.11
+   java -cp src ./src/main/java/ru/clevertec/check/CheckRunner 3-1 2-5 5-1 5-2 discountCard=1111 balanceDebitCard=100.11
    ```
 
 6. **Изучить вывод в консоле и файле.**
