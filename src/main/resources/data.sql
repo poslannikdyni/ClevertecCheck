@@ -1,37 +1,37 @@
-drop table if exists discount_card;
-create table discount_card
+DROP TABLE IF EXISTS public.discount_card;
+CREATE TABLE public.discount_card
 (
-    id     bigserial PRIMARY KEY,
-    number integer NOT NULL CHECK ( number > 999 AND number <  10000),
-    amount smallint CHECK ( amount >= 0 AND amount <=  100)
+    id     BIGSERIAL PRIMARY KEY,
+    number INTEGER   NOT NULL UNIQUE CHECK ( number BETWEEN 999 AND 10000),
+    amount SMALLINT  CHECK ( amount >= 0 AND amount <=  100)
 );
 
-alter table discount_card
-    owner to postgres;
+ALTER TABLE public.discount_card
+    OWNER TO postgres;
 
 
-INSERT INTO discount_card VALUES
+INSERT INTO public.discount_card VALUES
 (1,1111,3),
 (2,2222,3),
 (3,3333,4),
 (4,4444,5);
 
 
-drop table if exists product;
-create table product
+DROP TABLE IF EXISTS public.product;
+CREATE TABLE public.product
 (
-    id     bigserial PRIMARY KEY,
-    description VARCHAR(50) NOT NULL,
-    price DECIMAL(10, 2) NOT NULL,
+    id                BIGSERIAL PRIMARY KEY,
+    description       VARCHAR(50) NOT NULL,
+    price             DECIMAL(10, 2) NOT NULL,
     quantity_in_stock INTEGER NOT NULL CHECK ( quantity_in_stock > 0),
     wholesale_product BOOLEAN DEFAULT false
 );
 
-alter table product
-    owner to postgres;
+ALTER TABLE public.product
+    OWNER TO postgres;
 
 
-INSERT INTO product VALUES
+INSERT INTO public.product VALUES
 (1,'Milk',1.07,10,true),
 (2,'Cream 400g',2.71,20,true),
 (3,'Yogurt 400g',2.10,7,true),
