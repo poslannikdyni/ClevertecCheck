@@ -11,7 +11,7 @@
    cd ClevertecCheck
    ```
 
-3. **Переключиться на ветку** `feature/entry-core`
+3. **Переключиться на ветку** `feature/entry-file`
    ```bash
    git checkout feature/entry-core
    ```
