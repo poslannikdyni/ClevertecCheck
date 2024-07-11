@@ -23,7 +23,7 @@
    ```
 
 5. **Запустить приложение с заданными параметрами :**
-   java -cp ./out main.java.ru.clevertec.check.CheckRunner id-quantity discountCard=xxxx balanceDebitCard=xxxx
+   java -cp src ./src/main/java/ru/clevertec/check/CheckRunner id-quantity discountCard=xxxx balanceDebitCard=xxxx
    где 
    > id - идентификатор товара
    > quantity - количество товара
