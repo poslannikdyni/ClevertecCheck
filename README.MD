@@ -3,7 +3,7 @@
 
 1. **Выполнить команду создания контейнера для Docker**
    ```bash
-   docker run --rm --name clevertec-postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres  postgres
+   docker run --rm --name clevertec-postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=check  postgres
    ```
 
 2. **Клонировать проект**
