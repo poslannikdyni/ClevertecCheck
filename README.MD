@@ -13,7 +13,7 @@
 
 3. **Переключиться на ветку** `feature/entry-file`
    ```bash
-   git checkout feature/entry-core
+   git checkout feature/entry-file
    ```
 
 4. **В терминале ввести команду компиляции:**
