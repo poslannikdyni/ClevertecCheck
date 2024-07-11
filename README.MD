@@ -25,10 +25,10 @@
 5. **Запустить приложение с заданными параметрами :**
    java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java id-quantity discountCard=xxxx balanceDebitCard=xxxx
    где 
-   > id - идентификатор товара
-   > quantity - количество товара
-   > discountCard=xxxx - название и номер дисконтной карты
-   > balanceDebitCard=xxxx - баланс на дебетовой карте
+   1. id - идентификатор товара
+   2. quantity - количество товара
+   3. discountCard=xxxx - название и номер дисконтной карты
+   4. balanceDebitCard=xxxx - баланс на дебетовой карте
 
    Пример команды
 
