@@ -5,6 +5,8 @@ out/
 .idea/
 ClevertecCheck.iml
 result.csv
+build/
+gradle/
 
 ### Eclipse ###
 .apt_generated
