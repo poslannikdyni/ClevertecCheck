@@ -1,7 +1,7 @@
-package main.java.ru.clevertec.check.to;
+package ru.clevertec.check.to;
 
-import main.java.ru.clevertec.check.entity.DiscountCard;
-import main.java.ru.clevertec.check.entity.Product;
+import ru.clevertec.check.entity.DiscountCard;
+import ru.clevertec.check.entity.Product;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

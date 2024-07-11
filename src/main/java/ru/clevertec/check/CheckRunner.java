@@ -1,11 +1,11 @@
-package main.java.ru.clevertec.check;
+package ru.clevertec.check;
 
-import main.java.ru.clevertec.check.exception.CustomException;
-import main.java.ru.clevertec.check.to.OperationRequestTO;
+import ru.clevertec.check.exception.CustomException;
+import ru.clevertec.check.to.OperationRequestTO;
 
 import java.util.ArrayList;
 
-import static main.java.ru.clevertec.check.util.Utility.saveFile;
+import static ru.clevertec.check.util.Utility.saveFile;
 
 public class CheckRunner {
     public static void main(String[] args) {
@@ -41,9 +41,9 @@ public class CheckRunner {
         argsList.add("discountCard=1111");
         argsList.add("balanceDebitCard=100");
         argsList.add("saveToFile=result.csv");
-        argsList.add("datasource.url=jdbc:postgresql://localhost:5432/postgres");
+        argsList.add("datasource.url=jdbc:postgresql://localhost:5432/check");
         argsList.add("datasource.username=postgres");
-        argsList.add("datasource.password=password");
+        argsList.add("datasource.password=postgres");
         return argsList.toArray(new String[0]);
     }
 }

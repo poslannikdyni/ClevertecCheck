@@ -1,4 +1,4 @@
-package main.java.ru.clevertec.check.entity;
+package ru.clevertec.check.entity;
 
 import java.math.BigDecimal;
 import java.util.Objects;

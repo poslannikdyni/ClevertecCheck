@@ -1,6 +1,6 @@
-package main.java.ru.clevertec.check.converter;
+package ru.clevertec.check.converter;
 
-import main.java.ru.clevertec.check.to.CheckTO;
+import ru.clevertec.check.to.CheckTO;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

@@ -1,6 +1,6 @@
-package main.java.ru.clevertec.check.api.repository;
+package ru.clevertec.check.api.repository;
 
-import main.java.ru.clevertec.check.entity.DiscountCard;
+import ru.clevertec.check.entity.DiscountCard;
 
 public interface ApiDiscountCardRepository extends ApiRepositoryInterface<Long, DiscountCard> {
     DiscountCard getByNumber(int discountCardNumber);

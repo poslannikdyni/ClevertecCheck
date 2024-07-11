@@ -1,31 +1,31 @@
-package main.java.ru.clevertec.check.service;
+package ru.clevertec.check.service;
 
-import main.java.ru.clevertec.check.exception.CustomException;
-import main.java.ru.clevertec.check.api.service.ApiCheckService;
-import main.java.ru.clevertec.check.repository.InMemoryDiscountCardRepository;
-import main.java.ru.clevertec.check.repository.InMemoryProductRepository;
-import main.java.ru.clevertec.check.entity.DiscountCard;
-import main.java.ru.clevertec.check.entity.Product;
-import main.java.ru.clevertec.check.to.CheckTO;
-import main.java.ru.clevertec.check.to.OperationRequestTO;
+import ru.clevertec.check.exception.CustomException;
+import ru.clevertec.check.api.service.ApiCheckService;
+import ru.clevertec.check.repository.JdbcDiscountCardRepository;
+import ru.clevertec.check.repository.JdbcProductRepository;
+import ru.clevertec.check.entity.DiscountCard;
+import ru.clevertec.check.entity.Product;
+import ru.clevertec.check.to.CheckTO;
+import ru.clevertec.check.to.OperationRequestTO;
 
 import java.math.BigDecimal;
 import java.util.Map;
 
 public class CheckService implements ApiCheckService {
     private float wholesaleDiscount;
-    private InMemoryProductRepository productsRepository;
-    private InMemoryDiscountCardRepository discountCardRepository;
+    private JdbcProductRepository productsRepository;
+    private JdbcDiscountCardRepository discountCardRepository;
 
     public void setWholesaleDiscount(float wholesaleDiscount) {
         this.wholesaleDiscount = wholesaleDiscount;
     }
 
-    public void setProductsRepository(InMemoryProductRepository productsRepository) {
+    public void setProductsRepository(JdbcProductRepository productsRepository) {
         this.productsRepository = productsRepository;
     }
 
-    public void setDiscountCardRepository(InMemoryDiscountCardRepository discountCardRepository) {
+    public void setDiscountCardRepository(JdbcDiscountCardRepository discountCardRepository) {
         this.discountCardRepository = discountCardRepository;
     }
 

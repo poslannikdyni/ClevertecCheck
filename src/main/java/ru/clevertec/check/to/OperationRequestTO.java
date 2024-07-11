@@ -1,4 +1,4 @@
-package main.java.ru.clevertec.check.to;
+package ru.clevertec.check.to;
 
 import java.math.BigDecimal;
 import java.util.HashMap;

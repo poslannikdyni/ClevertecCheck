@@ -1,7 +1,7 @@
-package main.java.ru.clevertec.check;
+package ru.clevertec.check;
 
-import main.java.ru.clevertec.check.to.OperationRequestTO;
-import main.java.ru.clevertec.check.exception.CustomException;
+import ru.clevertec.check.to.OperationRequestTO;
+import ru.clevertec.check.exception.CustomException;
 
 import java.math.BigDecimal;
 

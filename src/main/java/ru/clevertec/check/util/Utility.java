@@ -1,6 +1,6 @@
-package main.java.ru.clevertec.check.util;
+package ru.clevertec.check.util;
 
-import main.java.ru.clevertec.check.exception.CustomException;
+import ru.clevertec.check.exception.CustomException;
 
 import java.io.IOException;
 import java.io.PrintWriter;
